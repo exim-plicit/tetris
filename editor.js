@@ -1,5 +1,5 @@
 //@ts-check
-///<reference path="./templates.js"/>
+///<reference path="./db.js"/>
 "use strict";
 import {MDP} from "./mdp.js";
 import {Field} from "./field.js";

@@ -1,5 +1,6 @@
 <?php
 	header("Content-type: application/x-javascript");
+	header('Content-Disposition: attachment; filename="db.js"');
 	$dsn = "mysql:dbname=main;";
 	$user = "readonly";
 	$password = "L-QEfbsQAkoHydIg";
