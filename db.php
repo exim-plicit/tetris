@@ -2,8 +2,8 @@
 	header("Content-type: application/x-javascript");
 	header('Content-Disposition: attachment; filename="db.js"');
 	$dsn = "mysql:dbname=main;";
-	$user = "readonly";
-	$password = "L-QEfbsQAkoHydIg";
+	$user = "root";
+	$password = "";
 	try{
 		$pdo = new PDO($dsn, $user, $password);
 		echo "const tags = {";
