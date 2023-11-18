@@ -147,3 +147,26 @@ if(canvas instanceof HTMLCanvasElement){
 		}
 	}
 }
+
+
+const post = document.getElementById("post");
+if(post instanceof HTMLButtonElement){
+	post.onclick = async(e)=>{
+		const data = {
+			name: "",
+			tags: [],
+			minos: ""
+		};
+		data.name = document.getElementById("dest_name")?.["value"];
+		data.tags = document.getElementById("dest_tags")?.["value"]?.split(",");
+		data.minos = document.getElementById("dest_minos")?.["value"];
+
+		const response = await fetch(`post.php`,{method: "POST", body: JSON.stringify(data)});
+		const logs = document.getElementById("logs");
+		if(logs instanceof HTMLDivElement){
+			const div = document.createElement("div");
+			div.append(document.createTextNode(await response.text()))
+			logs.prepend(div);
+		}
+	}
+}

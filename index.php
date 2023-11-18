@@ -11,7 +11,10 @@
 			<label>ID<input class="filter" data-key="data-id" type="textfield"></label>
 			<label>名前<input class="filter" data-key="data-name" type="textfield"></label>
 			<label>タグ<input class="filter" data-key="data-tag" type="textfield"></label>
-			<span class="tips">※半角スペースでAND検索</span>
+			<label>地形<input class="filter" data-key="data-minos" type="textfield"></label>
+			<span class="tips">※カンマor半角スペースでAND検索</span>
+		</div>
+		<div id="cards">
 		</div>
 		<script type="module" src="index.js"></script>
 	</body>

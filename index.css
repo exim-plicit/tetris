@@ -4,49 +4,56 @@ html, body{
 }
 .menu{
 	position: fixed;
+    background: black;
+	left: 0px;
+	right: 0px;
 	bottom: 0px;
-	margin: 4px;
-	width: 100%;
+	margin: 0px;
+	padding: 4px 12px;
+    border-top: 1px solid darkgray;
 	z-index: 1000;
 	.tips{
 		font-size: xx-small;
 		vertical-align: bottom;
 	}
 }
-.card{
-	border: 1px solid gray;
-	background-color: #202020;
-	margin: 1px;
-	padding: 4px;
-	display: inline-block;
-	width: fit-content;
-	.name{
-		color: white;
-		text-align: center;
-	}
-	.thumbnail{
-		position: relative;
-		.id{
-			position: absolute;
-			right: 0;
-			font-size: 8px;
-			color: gray;
-		}
-		.id::before{
-			content: "ID:";
-		}
-		.canvas{
-			display: block;
-		}
-	}
-	.tag{
-		display: inline-block;
-		font-size: xx-small;
-		background: gray;
-		width: fit-content;
+#cards{
+	margin-bottom: 40px;
+	.card{
+		border: 1px solid gray;
+		background-color: #202020;
 		margin: 1px;
-		padding-left: 4px;
-		padding-right: 4px;
-		border-radius: 4px;
+		padding: 4px;
+		display: inline-block;
+		width: fit-content;
+		.name{
+			color: white;
+			text-align: center;
+		}
+		.thumbnail{
+			position: relative;
+			.id{
+				position: absolute;
+				right: 0;
+				font-size: 8px;
+				color: gray;
+			}
+			.id::before{
+				content: "ID:";
+			}
+			.canvas{
+				display: block;
+			}
+		}
+		.tag{
+			display: inline-block;
+			font-size: xx-small;
+			background: gray;
+			width: fit-content;
+			margin: 1px;
+			padding-left: 4px;
+			padding-right: 4px;
+			border-radius: 4px;
+		}
 	}
 }
