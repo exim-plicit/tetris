@@ -1,7 +1,7 @@
 <?php
 	$raw = file_get_contents('php://input'); // POSTされた生のデータを受け取る
 	$data = json_decode($raw); // json形式をphp変数に変換
-	$data->id = dechex(crc32($data->name.$data->minos));
+	$data->id = strtoupper(dechex(crc32($data->name.$data->minos)));
 
 	$dsn = "mysql:dbname=main;";
 	$user = "root";
