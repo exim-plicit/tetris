@@ -8,9 +8,9 @@
 	$password = "";
 	try{
 		$pdo = new PDO($dsn, $user, $password);
-		$pdo->query("INSERT INTO `templates` (`id`, `name`, `minos`) VALUES ('{$data->id}', '{$data->name}', '{$data->minos}');");
+		$pdo->query("INSERT INTO `opener` (`id`, `name`, `minos`) VALUES ('{$data->id}', '{$data->name}', '{$data->minos}');");
 		foreach ($data->tags as $tag) {
-			$pdo->query("INSERT INTO `tag_maps` (`template_id`, `tag_name`) VALUES ('{$data->id}', '${tag}');");
+			$pdo->query("INSERT INTO `tag_maps` (`opener_id`, `tag_name`) VALUES ('{$data->id}', '${tag}');");
 		}
 		$pdo = null;
 		echo "{$data->id}として追加されました";

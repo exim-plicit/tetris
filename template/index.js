@@ -51,10 +51,29 @@ if(cards instanceof HTMLDivElement){
 		const container = card.appendChild(document.createElement("div"));
 		container.classList.add("thumbnail");
 		{
+			const ordinal = (value)=>{
+				const n = Math.abs(value);
+				const cent = n % 100;
+				if (cent >= 10 && cent <= 20) return n+"th";
+				switch(n % 10){
+					case 1: return n+"st";
+					case 2: return n+"nd";
+					case 3: return n+"rd";
+				}
+				return n+"th";
+			}
+			//考案
+			const inventor = container.appendChild(document.createElement("div"));
+			inventor.classList.add("inventor");
+			inventor.append(document.createTextNode(template.id));
+			//原案
+			const originator = container.appendChild(document.createElement("div"));
+			originator.classList.add("originator");
+			originator.append(document.createTextNode(template.id));
 			//ID
-			const div = container.appendChild(document.createElement("div"));
-			div.classList.add("id");
-			div.append(document.createTextNode(template.id));
+			const opid = container.appendChild(document.createElement("div"));
+			opid.classList.add("opid");
+			opid.append(document.createTextNode(template.id));
 			//画像部
 			const canvas = container.appendChild(document.createElement("canvas"));
 			canvas.classList.add("canvas");

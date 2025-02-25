@@ -32,14 +32,36 @@ html, body{
 		}
 		.thumbnail{
 			position: relative;
-			.id{
+			.opid{
+				position: absolute;
+				left: 0;
+				font-size: 8px;
+				color: gray;
+				background: #000A;
+			}
+			.opid::before{
+				content: "ID:";
+			}
+			.inventor{
 				position: absolute;
 				right: 0;
 				font-size: 8px;
 				color: gray;
+				background: #000A;
 			}
-			.id::before{
-				content: "ID:";
+			.inventor::before{
+				content: "考案:";
+			}
+			.originator{
+				position: absolute;
+				right: 0;
+				top: 8px;
+				font-size: 8px;
+				color: gray;
+				background: #000A;
+			}
+			.originator::before{
+				content: "原案:";
 			}
 			.canvas{
 				display: block;
